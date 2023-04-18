@@ -1,0 +1,499 @@
+.service__accordion-title, .service__accordion-num, .about__num-item span, .header__menu-tel, .title-white {
+  font-family: "EuropeExt-Regular", sans-serif;
+  font-weight: 400;
+}
+
+.title {
+  font-family: "EuropeExt-Bold", sans-serif;
+  font-weight: 700;
+}
+
+.about__num-item, .header__menu-link, .text {
+  font-family: "Murecho-Light", sans-serif;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "EuropeExt-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: local("EuropeExt-Regular"), url("../fonts/EuropeExt-Regular.woff2") format("woff2"), url("../fonts/EuropeExt-Regular.woff") format("font-woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "EuropeExt-Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: local("EuropeExt-Bold"), url("../fonts/EuropeExt-Bold.woff2") format("woff2"), url("../fonts/EuropeExt-Bold.woff") format("font-woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Murecho-Light";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Murecho-Light"), url("../fonts/Murecho-Light.woff2") format("woff2"), url("../fonts/Murecho-Light.woff") format("font-woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Murecho-Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Murecho-Medium"), url("../fonts/Murecho-Medium.woff2") format("woff2"), url("../fonts/Murecho-Medium.woff") format("font-woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato-Light";
+  font-weight: 300;
+  font-style: normal;
+  src: local("Lato-Light"), url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("font-woff");
+  font-display: swap;
+}
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*
+ *  jq-accordion - vv1.0.0
+ *  Responsive, CSS powered, jQuery accordion plugin
+ *  http://nayzawoo.github.com/jquery-accordion
+ *
+ *  (c) 2014 Victor Fernandez <victor@vctrfrnndz.com>
+ *  (c) 2016 Nay Zaw Oo <nayzawoo.me@gmail.com>
+ *  Under MIT License
+ */
+/* Requirements */
+[data-accordion] [data-content] {
+  overflow: hidden;
+  max-height: 0;
+}
+
+/* Basic Theme */
+[data-accordion] {
+  line-height: 1;
+}
+
+[data-control],
+[data-content] > * {
+  border-bottom: 1px solid #888;
+  padding: 10px;
+}
+
+[data-content] [data-accordion] {
+  border: 0;
+  padding: 0;
+}
+
+[data-accordion] [data-control] {
+  position: relative;
+  padding-right: 40px;
+}
+
+[data-accordion] > [data-control]:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 25px;
+  font-weight: 200;
+  color: #444;
+  height: 15px;
+  width: 24px;
+  background: url("../img/down.png") center center no-repeat;
+  background-size: 50%;
+}
+
+[data-accordion].open > [data-control]:after {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+body {
+  color: #2A2A2A;
+  background-color: #ECEDF2;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.container-wrapper {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.title {
+  font-size: 60px;
+  line-height: 100%;
+}
+
+.title-white {
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  text-shadow: 0.8px 0.8px 0.8px #FFFFFF;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+}
+
+.images {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[data-control], [data-content] > * {
+  border: none;
+  padding: 10px;
+}
+
+.header {
+  margin-bottom: 144px;
+  background-image: url("../images/header/bg.png");
+}
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.header__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 61px 0;
+}
+.header__menu-item + .header__menu-item {
+  margin-left: 50px;
+}
+.header__menu-link {
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+  color: #2A2A2A;
+}
+.header__menu-tel {
+  display: block;
+  font-size: 20px;
+  line-height: 100%;
+  color: #2A2A2A;
+  margin-left: 97px;
+  padding: 61px 94px;
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+}
+.header__content-inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2;
+  grid-template-columns: 2;
+  -ms-grid-rows: 2;
+  grid-template-rows: 2;
+      grid-template-areas: "A A  C C" "B B  C C";
+}
+.header__content-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: A;
+}
+.header__content-wrapper {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  grid-area: B;
+  border-top: 1px solid rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+.header__title {
+  padding-top: 23px;
+  margin-left: 142px;
+  margin-bottom: 14px;
+}
+.header__text {
+  margin-left: 142px;
+  margin-bottom: 47px;
+}
+.header__content-images--content {
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__content-images--content::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: hard-light;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__content-images--content:hover.header__content-images--content::before {
+  opacity: 0;
+}
+.header__bottom-btn {
+  padding: 134px 68px 72px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.header__content-images--header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  grid-area: C;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.header__content-images--header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/header/pic-2-r.jpg");
+  background-size: contain;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.header__content-images--header:hover.header__content-images--header::before {
+  opacity: 0;
+}
+.about {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 144px;
+  background-image: url("../images/header/bg.png");
+}
+.about__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.about__image {
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.about__image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/about/1-r.jpg");
+  background-size: cover;
+  background-position: center center;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.about__image:hover.about__image::before {
+  opacity: 0;
+}
+.about__wrapper-text {
+  max-width: 504px;
+  padding-top: 28px;
+  margin-left: 72px;
+}
+.about__num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 34px;
+}
+.about__num-item {
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+  color: #2A2A2A;
+  text-align: center;
+}
+.about__num-item span {
+  display: block;
+  text-align: center;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  color: #2A2A2A;
+  text-shadow: 0.4px 0.4px 0.4px #2A2A2A;
+}
+
+p.about__text {
+  margin-bottom: 26px;
+}
+
+.service {
+  background-image: url("../images/service/service-bg.jpg");
+  color: rgba(255, 255, 255, 0.3);
+}
+.service__title {
+  padding: 40px 0;
+}
+.service__accordion-item {
+  position: relative;
+}
+.service__accordion-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-top: 1px solid rgba(236, 237, 242, 0.7);
+  width: 150%;
+  height: 1px;
+  top: 0;
+  left: -25%;
+}
+.service__accordion-inner {
+  padding: 35px 0;
+}
+.service__accordion-wrapper {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.service__accordion-wrapper::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/service/sum.svg");
+  width: 144px;
+  height: 144px;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.service__accordion-content {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.service__accordion-title-text {
+  margin-left: 25px;
+}
+.service__accordion-num {
+  font-size: 36px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 0.3);
+}
+.service__accordion-title {
+  font-size: 24px;
+  line-height: 100%;
+  color: #FFFFFF;
+}
+.service__accordion-text {
+  max-width: 569px;
+}
+
+.service__accordion-item.open .service__accordion-inner {
+  background: #ECEDF2;
+}
+
+.service__accordion-item.open .service__accordion-num {
+  color: #2A2016;
+}
+
+.service__accordion-item.open .service__accordion-title {
+  color: #2A2016;
+}
+
+.service__accordion-item.open .service__accordion-text {
+  color: #2A2016;
+}
+
+.service__accordion-content {
+  background-image: url("../images/service/service-bg.jpg");
+  color: rgba(255, 255, 255, 0.3);
+}

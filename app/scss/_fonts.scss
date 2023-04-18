@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'EuropeExt-Regular';
+    font-weight: 400;
+    font-style: normal;
+    src: local('EuropeExt-Regular'),
+        url('../fonts/EuropeExt-Regular.woff2') format('woff2'),
+        url('../fonts/EuropeExt-Regular.woff') format('font-woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EuropeExt-Bold';
+    font-weight: 700;
+    font-style: normal;
+    src: local('EuropeExt-Bold'),
+        url('../fonts/EuropeExt-Bold.woff2') format('woff2'),
+        url('../fonts/EuropeExt-Bold.woff') format('font-woff');
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Murecho-Light';
+    font-weight: 300;
+    font-style: normal;
+    src: local('Murecho-Light'),
+        url('../fonts/Murecho-Light.woff2') format('woff2'),
+        url('../fonts/Murecho-Light.woff') format('font-woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Murecho-Medium';
+    font-weight: 500;
+    font-style: normal;
+    src: local('Murecho-Medium'),
+        url('../fonts/Murecho-Medium.woff2') format('woff2'),
+        url('../fonts/Murecho-Medium.woff') format('font-woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato-Light';
+    font-weight: 300;
+    font-style: normal;
+    src: local('Lato-Light'),
+        url('../fonts/Lato-Light.woff2') format('woff2'),
+        url('../fonts/Lato-Light.woff') format('font-woff');
+    font-display: swap;
+}
