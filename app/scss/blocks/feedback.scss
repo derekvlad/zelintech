@@ -1,0 +1,135 @@
+.feedback {
+    padding: 144px 0;
+    background-image: url('../images/header/bg.png');
+
+    &__title {
+        padding: 34px 0;
+    }
+
+    &__inner {
+        display: flex;
+
+    }
+
+    &__images {
+        position: relative;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 500%;
+            left: -200%;
+            height: 1px;
+            top: 0;
+            background: #000;
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 500%;
+            left: -200%;
+            height: 1px;
+            bottom: 0;
+            background: #000;
+            z-index: 2;
+        }
+    }
+
+    &__img-r {
+        position: absolute;
+        top: 0;
+        transition: all .5s;
+
+        &:hover {
+            opacity: 0;
+        }
+    }
+
+    &__form {
+        margin-left: 144px;
+        padding-top: 32px;
+        
+    }
+
+    &__back {
+        margin-left: 141px;
+        position: relative;
+        padding-top: 96px;
+        display: none;
+        
+    }
+
+    &__back-btn {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        top: 30px;
+        right: -65px;
+
+    }
+
+    &__back-title {
+        @extend %europe-400;
+        font-size: 24px;
+        line-height: 100%;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+    &__back-text{
+        @extend %europe-400;
+        font-size: 24px;
+        line-height: 100%;
+        color: #000000;
+    }
+
+    &__input {
+        display: block;
+        border: none;
+        background: transparent;
+        border-bottom: 1px solid #2A2A2A;
+        padding:  0px 12px 8px 5px;
+        margin-bottom: 42px;
+        width: 288px;
+        @extend %murecho-300;
+        font-size: 18px;
+        line-height: 110%;
+        letter-spacing: 0.05em;
+        color: #2A2A2A;
+
+        &::placeholder {
+            @extend %murecho-300;
+            font-size: 18px;
+            line-height: 110%;
+            letter-spacing: 0.05em;
+            color: #2A2A2A;
+        }
+    }
+
+    &__btn {
+        background: #2A2A2A;
+        padding: 16px 98px 22px;
+        @extend %murecho-300;
+        font-size: 18px;
+        line-height: 110%;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        transition: all .5s;
+        margin-bottom: 40px;
+
+        &:active {
+            color: rgba(255, 255, 255, 0.5);
+            transition: all .5s;
+        }
+
+        &:hover {
+            color: #2A2A2A;
+            background: #FFFFFF;
+            border: 1px solid #2A2A2A;
+        }
+    }
+}

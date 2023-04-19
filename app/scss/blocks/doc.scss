@@ -1,14 +1,9 @@
-.service {
-
+.doc{
     background-image: url('../images/service/service-bg.jpg');
-
     color: rgba(255, 255, 255, 0.3);
-
-
-    &__title {
+    &__title{
         padding: 40px 0;
     }
-
     &__accordion-item {
         position: relative;
 
@@ -29,7 +24,6 @@
         padding: 35px 0;
         position: relative;
         cursor: pointer;
-
     }
 
     &__accordion-wrapper {
@@ -85,6 +79,7 @@
     &__content-inner {
         display: flex;
         justify-content:center;
+        
     }
 
     &__content-wrapper {
@@ -135,29 +130,28 @@
  
              transition: all .5s;
         }
-        &:hover.service__content-images::before{
+        &:hover.doc__content-images::before{
             opacity: 0;
         }
     }
 }
-
-.service__accordion-item.open .service__accordion-inner {
+.doc__accordion-item.open .doc__accordion-inner {
     background: #ECEDF2;
 }
 
-.service__accordion-item.open .service__accordion-num {
+.doc__accordion-item.open .doc__accordion-num {
     color: #2A2016;
 }
 
-.service__accordion-item.open .service__accordion-title {
+.doc__accordion-item.open .doc__accordion-title {
     color: #2A2016;
 }
 
-.service__accordion-item.open .service__accordion-text {
+.doc__accordion-item.open .doc__accordion-text {
     color: #2A2016;
 }
 
-.service__accordion-content {
+.doc__accordion-content {
     background-image: url('../images/service/service-bg.jpg');
 
     color: rgba(255, 255, 255, 0.3);

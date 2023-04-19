@@ -1,0 +1,9 @@
+.clients{
+    padding: 144px 0;
+    background-image: url('../images/service/service-bg.jpg');
+    color: rgba(255, 255, 255, 0.3);
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+}

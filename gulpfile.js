@@ -78,6 +78,7 @@ function scripts() {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/jq-accordion/dist/js/jquery.accordion.js',
+        'node_modules/jquery.marquee/jquery.marquee.js',
         'app/js/main.js',
         
 
