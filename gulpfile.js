@@ -22,16 +22,20 @@ function browsersync() {
         }
     });
 };
-
+function htmlcopy() {
+    return src(['app/*.html','!app/index.html',])
+        .pipe(dest('dist/'))
+};
 function fileincludehtml() {
     return src(['app/index.html'])
         .pipe(fileInclude({
             prefix: '@@',
             basepath: '@file'
         }))
-        
+
         .pipe(dest('dist/'))
 };
+
 // function nunjucks() {
 //     return src('app/*.njk')
 //         .pipe(nunjucksRender())
@@ -48,15 +52,15 @@ function styles() {
             overrideBrowserslist: ['last 10 versions'],
             grid: true
         }))
-        
+
         .pipe(dest('app/css'))
         .pipe(dest('dist/css'))
         .pipe(browserSync.stream())
-        
+
 
 
 }
-function stylesBuild(){
+function stylesBuild() {
     return src([
         'app/scss/style.scss',
     ])
@@ -66,11 +70,11 @@ function stylesBuild(){
             overrideBrowserslist: ['last 10 versions'],
             grid: true
         }))
-        
+
         .pipe(dest('app/css'))
         .pipe(dest('dist/css'))
-        
-   
+
+
 }
 
 function scripts() {
@@ -80,7 +84,7 @@ function scripts() {
         'node_modules/jq-accordion/dist/js/jquery.accordion.js',
         'node_modules/jquery.marquee/jquery.marquee.js',
         'app/js/main.js',
-        
+
 
     ])
         .pipe(concat('main.min.js'))
@@ -145,7 +149,7 @@ function build() {
         'app/js/main.min.js'
     ], { base: 'app' })
         .pipe(webpHtmlNosvg())
-        
+
         .pipe(dest('dist'))
 }
 
@@ -156,7 +160,8 @@ function cleanDist() {
 function waching() {
     watch(['app/scss/**/*.scss', 'app/style/**/*.scss'], styles);
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-   
+
+    watch(['app/*.html'], htmlcopy);
     watch(['app/**/*.html'], fileincludehtml);
     watch(['app/images/**/*.*'], imagesbuild)
     // watch(['app/**/*.html'], webpHtml);
@@ -176,10 +181,11 @@ exports.cleanDist = cleanDist;
 // exports.webpHtml = webpHtml
 exports.webpcss = webpcss
 exports.fonts = fonts
+exports.htmlcopy = htmlcopy
 
 
 exports.webpimage = webpimage
 exports.build = series(cleanDist, imagesbuild, build, webpimage, webpcss, fonts);
 
 
-exports.default = parallel(fileincludehtml, styles, scripts,fonts, imagesbuild,  browsersync, waching);
+exports.default = parallel(htmlcopy,fileincludehtml, styles, scripts, fonts, imagesbuild, browsersync, waching);
