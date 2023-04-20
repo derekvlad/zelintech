@@ -62,7 +62,18 @@ $(function () {
         }, 500)
     })
 
-    
+    $('.contactus__input--tel').on('focusin', function () {
+        setTimeout(function () {
+            $('.contactus__input--tel').attr('placeholder', '+7')
+        }, 50)
+
+    });
+    $('.contactus__input--tel').on('focusout', function () {
+        setTimeout(function () {
+            $('.contactus__input--tel').attr('placeholder', 'Номер телефона')
+        }, 50)
+
+    });
 
 
 });
