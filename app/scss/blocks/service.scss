@@ -52,9 +52,9 @@
 
     &__accordion-content {
         max-width: 100%;
-          
+
         margin: 0 auto;
-      
+
     }
 
     &__accordion-title-text {
@@ -84,7 +84,7 @@
 
     &__content-inner {
         display: flex;
-        justify-content:center;
+        justify-content: center;
     }
 
     &__content-wrapper {
@@ -102,20 +102,21 @@
     }
 
     &__content-text {
-       
+
         padding-top: 37px;
-        
+
         @extend %lato-300;
         font-size: 18px;
         line-height: 100%;
         color: rgba(255, 255, 255, 0.5);
         position: relative;
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             border: 0.5px solid #BDBEBE;
             width: 400%;
-            
+
             top: 0;
             right: -61px;
         }
@@ -124,6 +125,7 @@
     &__content-images {
         max-width: 720px;
         position: relative;
+
         &::before {
             content: '';
             position: absolute;
@@ -132,10 +134,11 @@
             background-image: url('../images/service/2-r.jpg');
             background-size: cover;
             background-position: center center;
- 
-             transition: all .5s;
+
+            transition: all .5s;
         }
-        &:hover.service__content-images::before{
+
+        &:hover.service__content-images::before {
             opacity: 0;
         }
     }
@@ -161,4 +164,60 @@
     background-image: url('../images/service/service-bg.jpg');
 
     color: rgba(255, 255, 255, 0.3);
+}
+
+@media(max-width:768px) {
+    .service__accordion-num {
+        display: none;
+    }
+
+    .service__accordion-title-text {
+        max-width: 298px;
+    }
+
+    .service__accordion-title {
+        margin-bottom: 10px;
+    }
+
+    .service__accordion-wrapper {
+        &::after {
+            content: "";
+            position: absolute;
+            height: 158%;
+            width: 1px;
+            background: #fff;
+            right: 85px;
+            top: -33px;
+
+        }
+    }
+
+    .service__accordion-wrapper::before {
+        content: "";
+        right: -30px;
+
+
+    }
+    .service__accordion-item.open .service__accordion-wrapper::after{
+        display: none;
+    }
+    .service__accordion-item.open .service__accordion-text{
+        display: none;  
+    }
+    .service__accordion-text{
+        &::before{
+            display: none;
+        }
+    }
+    .service__content-title{
+        display: none;
+    }
+    .service__content-inner{
+        flex-direction: column-reverse;
+    }
+    .service__content-wrapper {
+        max-width: 517px;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
 }

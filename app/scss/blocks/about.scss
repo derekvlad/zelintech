@@ -68,3 +68,43 @@
 p.about__text {
     margin-bottom: 26px;
 }
+
+@media(max-width:768px){
+    .about{
+        border: none;
+        margin-bottom: 88px;
+    }
+    .about__image{
+        display: none;
+    }
+    .about__wrapper-text{
+        margin-left: 0;
+    }
+    .about__num{
+        display: block;
+    }
+    .about__num-item{
+        padding: 30px 0;
+    }
+    .about__num-item:nth-child(2){
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 1px;
+            top: 0;
+            left: -10%;
+            background: #000;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 1px;
+            bottom: 0;
+            left: -10%;
+            background: #000;
+        }
+    }
+}

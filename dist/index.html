@@ -23,12 +23,23 @@
                 <li class="header__menu-item">
                     <a class="header__menu-link" href="contacts.html">Контакты</a>
                 </li>
+                <li class="menu__close">
+                    <button class="menu__btn-close"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line x1="22.2739" y1="22.2739" x2="7.42465" y2="7.42463" stroke="#2A2A2A" />
+                            <line x1="22.2738" y1="7.42463" x2="7.4246" y2="22.2739" stroke="#2A2A2A" />
+                        </svg>
+                    </button>
+                </li>
             </ul>
             <a href="tel:+74997312232" class="header__menu-tel">+7 (499) 731-22-32</a>
+            <button class="menu__btn"><img src="images/menu.svg" alt=""></button>
         </nav>
         <div class="header__content">
             <div class="header__content-inner">
                 <div class="header__content-title">
+                    <h1 class="header__title--mob title">Cтроим ваш
+                        внешний мир</h1>
                     <h1 class="header__title title">Профессионализм <br> и передовые <br> технологии</h1>
                     <p class="header__text text">18 лет опыта на рынке Москвы и Подмосковья</p>
 
@@ -48,14 +59,13 @@
                     </button>
                 </div>
                 <div class="header__content-images--header">
-                    <img class="header__content-img--header images"
-                        src="images/header/pic-2.jpg" alt="header image"></div>
+                    <img class="header__content-img--header images" src="images/header/pic-2.jpg" alt="header image">
+                </div>
 
             </div>
         </div>
     </div>
 </header>
-
     <main>
         <section class="about">
     <div class="container-wrapper">
@@ -76,7 +86,9 @@
     </div>
 </section>
         <section class="service">
-    <div class="container-wrapper"> <h2 class="service__title title-white">Услуги</h2></div>
+    <div class="container-wrapper">
+        <h2 class="service__title title-white">Услуги</h2>
+    </div>
    
     <div class="accordion">
         <div class="service__accordion-item" data-accordion>
@@ -244,75 +256,88 @@
                                         <circle cx="15.7869" cy="15.7869" r="10.663"
                                             transform="rotate(45 15.7869 15.7869)" stroke="#2A2A2A" />
                                     </svg>
+                                    <span class="project-menu__btn-span"> смотреть больше</span>
                                 </button>
-                                
+
                             </div>
                         </div>
                         <div class="project__slider-item">
                             <div class="project__slider-images">
                                 <img class="project__slider-img" src="images/project/1.jpg" alt="">
                                 <img class="project__slider-img--r" src="images/project/1-r.jpg" alt="">
-                                <button class="project-menu__btn" data-num="2">
+                                <button class="project-menu__btn" data-num="1">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <line x1="23.5077" y1="22.8005" x2="30.8749" y2="30.1677" stroke="#2A2A2A" />
                                         <circle cx="15.7869" cy="15.7869" r="10.663"
                                             transform="rotate(45 15.7869 15.7869)" stroke="#2A2A2A" />
                                     </svg>
+                                    <span class="project-menu__btn-span"> смотреть больше</span>
                                 </button>
+
                             </div>
                         </div>
                         <div class="project__slider-item">
                             <div class="project__slider-images">
                                 <img class="project__slider-img" src="images/project/1.jpg" alt="">
                                 <img class="project__slider-img--r" src="images/project/1-r.jpg" alt="">
-                                <button class="project-menu__btn" data-num="3">
+                                <button class="project-menu__btn" data-num="1">
                                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <line x1="23.5077" y1="22.8005" x2="30.8749" y2="30.1677" stroke="#2A2A2A" />
                                         <circle cx="15.7869" cy="15.7869" r="10.663"
                                             transform="rotate(45 15.7869 15.7869)" stroke="#2A2A2A" />
                                     </svg>
+                                    <span class="project-menu__btn-span"> смотреть больше</span>
                                 </button>
+
                             </div>
-                           
+
                         </div>
 
                     </div>
-                    
+
                 </div>
             </div>
         </div>
         <div class="project__modal project__modal-1">
             <div class="container-wrapper">
-            <div class="project__modal-wrapper">
-                <h2 class="project__modal-title title">Проекты</h2>
-                <button class="project__modal-close"><img src="images/project/close.png" alt=""></button>
+                <div class="project__modal-wrapper">
+                    <h2 class="project__modal-title title">Проекты</h2>
+                    <button class="project__modal-close">
+                        <img src="images/project/close.png" alt="">
+                        
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="container-wrapper">
-            <div class="project__slide-1 project__slide">
-                <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
-                <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
-                <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+            <div class="container-wrapper project__modal-wrapper--btn">
+                <button class="project__modal-close--mob">
+                    закрыть
+                </button>
+                <div class="project__slide-1 project__slide">
+                    <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+                    <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+                    <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+                </div>
+                <div class="project__slide-2 project__slide">
+                    <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+                    <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+                    <img class="project__slider-img" src="images/project/modal1.jpg" alt="">
+                </div>
+                <div class="project__slide-3 project__slide">
+                    <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+                    <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+                    <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
+                </div>
             </div>
-            <div class="project__slide-2 project__slide">
-                <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
-                <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
-                <img class="project__slider-img" src="images/project/modal1.jpg" alt="">
-            </div>
-            <div class="project__slide-3 project__slide" >
-                <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
-                <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
-                <img class="project__slider-img" src="images/project/modal/1.jpg" alt="">
-            </div>
-        </div>
         </div>
     </div>
 </section>
         <section class="doc">
     <div class="container-wrapper">
-        <h2 class="doc__title title-white">Документация</h2>
+        <h2 class="doc__title title-white"> <span class="doc__title--pc">Документация</span> 
+            <span class="doc__title--mob" >Док-ция</span>
+        </h2>
     </div>
     <div class="accordion">
         <div class="doc__accordion-item" data-accordion>
@@ -387,7 +412,7 @@
         <section class="feedback">
     <div class="container-wrapper">
         <h2 class="feedback__title title">Обратная связь</h2>
-        <div class="container-wrapper">
+        <div class="container-wrapper feedback__container">
             <div class="feedback__inner">
                 <div class="feedback__images">
                     <img class="feedback__img" src="images/feedback/1.jpg" alt="">
@@ -419,7 +444,7 @@
         <h2 class="clients__title title-white">Заказчики</h2>
     </div>
     <div class="clients__inner" id="clients__inner">
-        <div class="clients__group-1">
+        <div class="clients__group-1 clients__group">
             <div class="clients__item">
                 <img class="clients__img" src="images/clients/1.png" alt="client image">
             </div>
@@ -429,9 +454,9 @@
             <div class="clients__item">
                 <img class="clients__img" src="images/clients/3.png" alt="client image">
             </div>
-          
+
         </div>
-        <div class="clients__group-2">
+        <div class="clients__group-2 clients__group">
             <div class="clients__item">
                 <img class="clients__img" src="images/clients/4.png" alt="client image">
             </div>
@@ -441,28 +466,32 @@
             <div class="clients__item">
                 <img class="clients__img" src="images/clients/6.png" alt="client image">
             </div>
-           
+
         </div>
-        <div class="clients__slider">
-            <div class="clients__item">
-                <img class="clients__img" src="images/clients/1.png" alt="client image">
+        <div class="container">
+            <div class="clients__slider">
+                <div class="clients__item-slider">
+                    <img class="clients__img-slider" src="images/clients/1.png" alt="client image">
+                </div>
+                <div class="clients__item-slider">
+                    <img class="clients__img-slider" src="images/clients/2.png" alt="client image">
+                </div>
+                <div class="clients__item-slider">
+                    <img class="clients__img-slider" src="images/clients/3.png" alt="client image">
+                </div>
+                <div class="clients__item-slider">
+                    <img class="clients__img-slider" src="images/clients/4.png" alt="client image">
+                </div>
+                <div class="clients__item-slider">
+                    <img class="clients__img-slider" src="images/clients/5.png" alt="client image">
+                </div>
+                <div class="clients__item-slider">
+                    <img class="clients__img-slider" src="images/clients/6.png" alt="client image">
+                </div>
             </div>
-            <div class="clients__item">
-                <img class="clients__img" src="images/clients/2.png" alt="client image">
-            </div>
-            <div class="clients__item">
-                <img class="clients__img" src="images/clients/3.png" alt="client image">
-            </div>
-            <div class="clients__item">
-                <img class="clients__img" src="images/clients/4.png" alt="client image">
-            </div>
-            <div class="clients__item">
-                <img class="clients__img" src="images/clients/5.png" alt="client image">
-            </div>
-            <div class="clients__item">
-                <img class="clients__img" src="images/clients/6.png" alt="client image">
-            </div>
+
         </div>
+
     </div>
 </section>
 

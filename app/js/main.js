@@ -31,6 +31,9 @@ $(function () {
     $('.project__modal-close').on('click', function () {
         $('.project__modal').removeClass('project__modal--active')
     });
+    $('.project__modal-close--mob').on('click', function () {
+        $('.project__modal').removeClass('project__modal--active')
+    });
 
 
     $('.feedback__input--tel').on('focusin', function () {
@@ -74,6 +77,15 @@ $(function () {
         }, 50)
 
     });
-
+    $('.menu__btn').on('click', function(){
+        $('.header__menu-list').addClass('header__menu-list--active')
+    })
+    $('.menu__close, .header__menu-link').on('click', function(){
+        $('.header__menu-list').removeClass('header__menu-list--active')
+    })
+    $('.clients__slider').slick({
+        prevArrow: "<button class='a-left control-c prev slick-prev'><img  src='../images/clients/arrow-w-left.svg'></button>",
+        nextArrow: "<button class='a-right control-c next slick-next'><img  src='../images/clients/arrow-w-right.svg'></button>"
+    });
 
 });

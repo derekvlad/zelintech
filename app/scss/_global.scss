@@ -1,17 +1,29 @@
+html{
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
     color: #2A2A2A;
     background-color: #ECEDF2;;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
+    overflow-x: hidden;
     
 }
 .container-wrapper{
     max-width: 1152px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 textarea:focus,
